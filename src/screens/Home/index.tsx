@@ -22,7 +22,7 @@ export function Home() {
         Alert.alert('Atenção', `Deseja realmente remover ${name} de sua lista?`, [
             {
                 text: 'Sim',
-                onPress: () => Alert.alert('Usuário removido.')
+                onPress: () => setParticipants(prevState => prevState.filter(participant => participant != name))
             },
             {
                 text: 'Não',
